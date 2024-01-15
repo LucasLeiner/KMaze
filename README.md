@@ -31,6 +31,7 @@ Et de la doc officiel :
 - https://docs.unity3d.com/Manual/index.html
 
 Ennemi :
+
 En ajoutant le package navigationAi, puis en instanciant un navmesh pour notre ennemi, un simple "SetDestination(player.position)" permet à l'ennemi de se diriger vers nous automatiquement.
 Je change sa couleur avec "rend.material.SetColor()" lorsque mon booléen indiquant que j'ai mangé une cerise est à "true".
 
@@ -54,6 +55,7 @@ En ajoutant un boxcollider à mon emplacement de téléportation et en cochant i
 Il faut ensuite appeller la fonction dans notre PlayerInput.
 
 Coffre :
+
 Après avoir configuré le playerInput pour appeler la fonction Finish().
 Celle ci désaffiche le menu qui expliquait comment ouvrir le coffre, enregistre le highscore si nécessaire, reset le score puis démarre ma routine de fin.
 Celle si passe un booléen paramètre de l'animatorController de mon coffre pour lancer l'animation d'ouverture du coffre, attend 2 secondes le temp que l'animation se fasse, stop le jeu, change de music et affiche le menu de fin afin de redémarrer une partie.
