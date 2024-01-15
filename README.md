@@ -53,3 +53,27 @@ En ajoutant un boxcollider à mon emplacement de téléportation et en cochant i
     }
 Il faut ensuite appeller la fonction dans notre PlayerInput.
 
+Coffre :
+Après avoir configuré le playerInput pour appeler la fonction Finish().
+Celle ci désaffiche le menu qui expliquait comment ouvrir le coffre, enregistre le highscore si nécessaire, reset le score puis démarre ma routine de fin.
+Celle si passe un booléen paramètre de l'animatorController de mon coffre pour lancer l'animation d'ouverture du coffre, attend 2 secondes le temp que l'animation se fasse, stop le jeu, change de music et affiche le menu de fin afin de redémarrer une partie.
+
+    public  void  Finish(){
+	    if(onChest  &&  KeyManager.keyTaken){
+		    MenuChest.SetActive(false);
+		    if (scoreManager.score  >  scoreManager.highScore){
+			    scoreManager.highScore  =  scoreManager.score;
+			    PlayerPrefs.SetInt("HighScore", scoreManager.highScore);
+		    }
+		    scoreManager.score  =  0;
+		    StartCoroutine("Fin");
+	    }
+    }
+    IEnumerator  Fin(){
+	    animator.SetBool("Finished", true);
+	    yield  return  new  WaitForSeconds(2f);
+	    Time.timeScale  =  0f;
+	    MenuFin.SetActive(true);
+	    StopAllAudio();
+	    audioFin.Play();
+    }
