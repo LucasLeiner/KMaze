@@ -31,7 +31,6 @@ Et de la doc officiel :
 - https://docs.unity3d.com/Manual/index.html
 
 Ennemi :
-
 En ajoutant le package navigationAi, puis en instanciant un navmesh pour notre ennemi, un simple "SetDestination(player.position)" permet à l'ennemi de se diriger vers nous automatiquement.
 Je change sa couleur avec "rend.material.SetColor()" lorsque mon booléen indiquant que j'ai mangé une cerise est à "true".
 
@@ -55,7 +54,6 @@ En ajoutant un boxcollider à mon emplacement de téléportation et en cochant i
 Il faut ensuite appeller la fonction dans notre PlayerInput.
 
 Coffre :
-
 Après avoir configuré le playerInput pour appeler la fonction Finish().
 Celle ci désaffiche le menu qui expliquait comment ouvrir le coffre, enregistre le highscore si nécessaire, reset le score puis démarre ma routine de fin.
 Celle si passe un booléen paramètre de l'animatorController de mon coffre pour lancer l'animation d'ouverture du coffre, attend 2 secondes le temp que l'animation se fasse, stop le jeu, change de music et affiche le menu de fin afin de redémarrer une partie.
@@ -79,3 +77,20 @@ Celle si passe un booléen paramètre de l'animatorController de mon coffre pour
 	    StopAllAudio();
 	    audioFin.Play();
     }
+## Blender
+### Cherry
+Elle est pas très belle mais j'ai voulu tester le sculpting, puis pour la feuille j'ai utilisé une curve avec les modifiers "Screw", et "Solidify".
+
+### Map
+Une grande base carré avec subdivide puis je sélectionne des faces pour dessiner mon labyrinthe puis je les extrudes.
+
+### Chapeau
+Un disque avec "Bevel" pour arrondir les angles, puis une demi sphere avec la ligne du bas extrude along normals pour créer le bandeau, puis je dissocie le bandeau du reste pour différencier les couleurs.
+
+### Logo
+Importation du logo en svg trouvé sur internet, une fois dans blender je lui applique "solidify" .
+
+### Chest
+Avec l'aide de la vidéo de "Imphenzia" https://www.youtube.com/watch?v=odtAyX2U9Y4&t=603s
+J'ai réutilisé mon logo fait précédemment pour le mettre à l'emplacement du verrou puis utiliser le "Boolean" pour creuser mon verrou avec la forme de mon logo.
+Puis j'ai fait une animation d'ouverture très basique avec 2 bones.
