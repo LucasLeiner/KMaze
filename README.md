@@ -1,10 +1,15 @@
 # Kmaze
 ## Principe
 Vous contrôlez  "Pepe" avec les touches "ZQSD", vous pouvez sauter avec "espace", faire pause avec "échap", et intéragir avec "f".
+
 Récupérez les pièces qui apparaissent sur la map afin d'augmenter votre score, mais faites attention à l'ennemie qui vous poursuit, s'il vous touche trois fois, c'en sera fini de vous. 
+
 Afin de vous en débarrasser, tout les 5 de score la cerise apparait, prenez là afin d'inverser l'ordre des forces.
+
 Sur la carte se trouve des téléporteurs, prenez les pour échapper à l'ennemie ou pour accélérer votre collecte de pièce.
+
 Une fois les 20 pièces atteintes, la clé et le coffre apparaissent à la place des téléporteurs. Ramassez la clé, puis ouvrez le coffre pour terminer la partie, mais rien ne vous empêche d'aller chercher un score plus haut.
+
 ### PS
 Il est possible de baisser les sons dans le menu pause.
 Il est possible de sauter par dessus l'ennemie.
